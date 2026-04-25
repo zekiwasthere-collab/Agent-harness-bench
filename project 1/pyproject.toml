@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-harness-bench"
+version = "0.1.0"
+description = "Benchmark harness suite for evaluating LLM agent trajectories"
+requires-python = ">=3.10"
+dependencies = [
+    "click>=8.1",
+    "networkx>=3.1",
+    "jinja2>=3.1",
+    "pydantic>=2.0",
+    "rich>=13.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "pytest-cov"]
+
+[project.scripts]
+agent-harness-bench = "agent_harness_bench.cli:cli"
+
+[tool.setuptools.packages.find]
+where = ["src"]
