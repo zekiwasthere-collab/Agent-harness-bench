@@ -1,2 +1,0 @@
-[console_scripts]
-agent-harness-bench = agent_harness_bench.cli:cli
